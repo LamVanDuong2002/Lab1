@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, StyleSheet, TextInput, View, Image, Text, TouchableOpacity, ImageBackground, Alert } from "react-native"
+import { Button, StyleSheet, TextInput, View, Image, Text, TouchableOpacity, Alert } from "react-native"
 
 const LoginComponent = () => {
 
@@ -18,9 +18,8 @@ const LoginComponent = () => {
     }
 
     return(
-        <ImageBackground style={LoginStyle.backgroundImg}  source={{uri:'https://i.pinimg.com/564x/42/a2/34/42a234a6d84c0834abd409a9ccd11503.jpg'}}>        
             <View style={LoginStyle.container }>
-                <Image resizeMode="stretch" style={{width:350, height:250}} source={require("../assets/react-native-logo.png")} />
+                <Image resizeMode="stretch" style={{width:350, height:250}} source={require("../assets/favicon.png")} />
                 <Text 
                     onPress={()=>{
                         Alert.alert(`Thông báo`,`Đăng ký`)
@@ -43,8 +42,6 @@ const LoginComponent = () => {
                     <Text style={LoginStyle.buttonText}>LOGIN</Text>
                 </TouchableOpacity>
             </View>
-    </ImageBackground>
-
     )
 }
 export default LoginComponent
@@ -55,16 +52,12 @@ var LoginStyle = StyleSheet.create({
         alignItems: "center",
         justifyContent:"center"
     },
-    childContainer:{
-
-    },
-    textInput:{
-        
+    textInput:{ 
         width:350,
         height:60,
         padding:10,
         marginTop:8,
-        borderColor:"royalblue",
+        borderColor:"blue",
         borderWidth:1,
         borderRadius:8,
         backgroundColor:"azure"
@@ -76,7 +69,7 @@ var LoginStyle = StyleSheet.create({
     },
     button:{
         width: 350,
-        backgroundColor:"dodgerblue",
+        backgroundColor:"blue",
         marginTop:15,
         padding: 10,
       
